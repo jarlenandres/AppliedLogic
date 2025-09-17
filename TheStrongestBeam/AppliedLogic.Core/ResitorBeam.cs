@@ -2,17 +2,12 @@
 {
     public class ResitorBeam
     {
-        private string _beam = null!;
-
-        public string Beam1
+        public static bool IsValid(string message)
         {
-            get => _beam;
-            set => _beam = value;
-        }
+            Console.Write(message);
+            var beam = Console.ReadLine();
 
-        public static bool IsValid(string beam)
-        {
-            string b = beam.Substring(0, 1);
+            string b = beam!.Substring(0, 1);
             if (!(b.Equals("%") || b.Equals("&") || b.Equals("#")))
             {
                 return false;
@@ -22,7 +17,7 @@
             int count = 0;
             for (int i = 1; i < size; i++)
             {
-                string position = beam.Substring(i, 1 + 1);
+                string position = beam.Substring(i, i + 1);
                 if (!(position.Equals("=") || position.Equals("*")))
                 {
                     return false;
@@ -39,35 +34,21 @@
                 {
                     return false;
                 }
-
-                if (IsValid(beam))
-                {
-                    if (CalculateWeight(beam))
-                    {
-                        return false;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
-                else
-                {
-                    return false;
-                }
             }
             return true;
         }
 
-        public static bool CalculateWeight(string beam)
+        public static bool CalculateWeight(string message)
         {
-            string b = beam.Substring(0, 1);
+            Console.Write(message);
+            var beam = Console.ReadLine();
+            string b = beam!.Substring(0, 1);
             int size = beam.Length;
             int total = 0;
             int segment = 0;
             for (int i = 1; i < size; i++)
             {
-                string position = beam.Substring(i, 1 + 1);
+                string position = beam.Substring(i, i + 1);
                 if (position.Equals("="))
                 {
                     segment++;
@@ -96,7 +77,9 @@
                     break;
             }
             ;
-            return weightLimit >= total; ;
+            return weightLimit >= total;
         }
+
+
     }
 }
