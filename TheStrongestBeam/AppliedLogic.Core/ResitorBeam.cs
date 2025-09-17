@@ -4,7 +4,7 @@
     {
         private string _beam = null!;
 
-        public string Beam
+        public string Beam1
         {
             get => _beam;
             set => _beam = value;
@@ -12,12 +12,12 @@
 
         public static bool IsValid(string beam)
         {
-            
             string b = beam.Substring(0, 1);
             if (!(b.Equals("%") || b.Equals("&") || b.Equals("#")))
             {
                 return false;
             }
+
             int size = beam.Length;
             int count = 0;
             for (int i = 1; i < size; i++)
@@ -44,16 +44,16 @@
                 {
                     if (CalculateWeight(beam))
                     {
-                        throw new Exception("The beam supports the weight.");
+                        return false;
                     }
                     else
                     {
-                        throw new Exception("The beam is valid but does not support the weight.");
+                        return false;
                     }
                 }
                 else
                 {
-                    throw new Exception("The beam is not valid.");
+                    return false;
                 }
             }
             return true;
@@ -83,36 +83,20 @@
             int weightLimit = 0;
             switch (b)
             {
-                case "%": weightLimit = 10;
+                case "%":
+                    weightLimit = 10;
                     break;
+
                 case "&":
                     weightLimit = 20;
                     break;
+
                 case "#":
                     weightLimit = 90;
                     break;
             }
             ;
             return weightLimit >= total; ;
-        }
-
-        public static bool ValidationMessage(string beam)
-        {
-            if (IsValid(beam))
-            {
-                if (CalculateWeight(beam))
-                {
-                    throw new Exception("The beam is valid and supports the weight.");
-                }
-                else
-                {
-                    throw new Exception("The beam not support the weight.");
-                }
-            }
-            else
-            {
-                throw new Exception("The beam is poorly constructed.");
-            }
         }
     }
 }

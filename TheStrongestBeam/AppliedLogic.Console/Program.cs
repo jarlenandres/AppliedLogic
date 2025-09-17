@@ -1,18 +1,21 @@
 ﻿using AppliedLogic.Core;
 
-var beam = string.Empty;
-try
-{
-	Console.Write("Enter the beam: ");
-	beam = Console.ReadLine() ?? string.Empty;
-	var resitorBeam = new ResitorBeam
-	{
-		Beam = beam
-	};
+string beam = string.Empty;
+Console.WriteLine("Enter the beam: ");
+beam = Console.ReadLine() ?? string.Empty;
 
+if (ResitorBeam.IsValid(beam))
+{
+    if (ResitorBeam.CalculateWeight(beam))
+    {
+        throw new Exception("The beam is valid and supports the weight.");
+    }
+    else
+    {
+        throw new Exception("The beam not support the weight.");
+    }
 }
-catch (Exception ex)
+else
 {
-
-	Console.WriteLine(ex.Message);
+    throw new Exception("The beam is poorly constructed.");
 }
