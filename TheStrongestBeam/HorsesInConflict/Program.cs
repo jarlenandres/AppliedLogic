@@ -10,14 +10,12 @@ internal class HorsesConflict
 
         string[] positions = entrance.Split(',');
 
-        // Diccionario para convertir letras a columnas (A-H → 1-8)
         Dictionary<char, int> columns = new Dictionary<char, int>
         {
             {'A', 1}, {'B', 2}, {'C', 3}, {'D', 4},
             {'E', 5}, {'F', 6}, {'G', 7}, {'H', 8}
         };
 
-        // Lista de posiciones de los caballos convertidas a coordenadas
         List<(int row, int col)> horses = new List<(int, int)>();
         foreach (var pos in positions)
         {
@@ -30,11 +28,9 @@ internal class HorsesConflict
             }
         }
 
-        // Todos los posibles movimientos de un caballo
         int[] dRow = { 2, 1, -1, -2, -2, -1, 1, 2 };
         int[] dCols = { 1, 2, 2, 1, -1, -2, -2, -1 };
 
-        // Revisar conflictos
         for (int i = 0; i < horses.Count; i++)
         {
             var current = horses[i];
@@ -67,7 +63,6 @@ internal class HorsesConflict
                 }
             }
 
-            // Mostrar resultado
             string letraActual = "";
             foreach (var kv in columns)
             {
