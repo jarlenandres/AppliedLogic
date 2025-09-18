@@ -62,17 +62,17 @@ internal class HorsesConflict
                 }
             }
 
-            string letraActual = "";
+            string lyricsCurrent = "";
             foreach (var kv in columns)
             {
                 if (kv.Value == current.col)
                 {
-                    letraActual = kv.Key.ToString();
+                    lyricsCurrent = kv.Key.ToString();
                     break;
                 }
             }
 
-            Console.Write($"Analyzing Horse in {current.row}{letraActual} =>");
+            Console.Write($"Analyzing Horse in {current.row}{lyricsCurrent} =>");
 
             if (string.IsNullOrEmpty(conflict))
             {
