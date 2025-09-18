@@ -8,7 +8,7 @@ internal class BeamProgram
         Console.Write("Enter the beam: ");
         string beam = Console.ReadLine();
 
-        string result = ResitorBeam.EvaluateBeam(beam);
+        string result = TheStrongestBeam.EvaluateBeam(beam);
         Console.WriteLine(result);
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace AppliedLogic.Core
 {
-    public class ResitorBeam
+    public class TheStrongestBeam
     {
         public static string EvaluateBeam(string beam)
         {
