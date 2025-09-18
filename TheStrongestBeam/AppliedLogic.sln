@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppliedLogic.Console", "App
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ResistorBeam", "ResistorBeam", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HorsesInConflict", "HorsesInConflict", "{91D3F859-44BF-446A-8FCF-9805F7C7A2A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HorsesInConflict", "HorsesInConflict\HorsesInConflict.csproj", "{D9989DA5-F376-4251-9F84-95BBA2406D18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +27,10 @@ Global
 		{AEECD52F-4E37-47E2-9C00-A469F7A1FC0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEECD52F-4E37-47E2-9C00-A469F7A1FC0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEECD52F-4E37-47E2-9C00-A469F7A1FC0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9989DA5-F376-4251-9F84-95BBA2406D18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9989DA5-F376-4251-9F84-95BBA2406D18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9989DA5-F376-4251-9F84-95BBA2406D18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9989DA5-F376-4251-9F84-95BBA2406D18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E8B62DE4-3BC1-4CAF-9FC2-6911E8CB4149} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{AEECD52F-4E37-47E2-9C00-A469F7A1FC0A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{D9989DA5-F376-4251-9F84-95BBA2406D18} = {91D3F859-44BF-446A-8FCF-9805F7C7A2A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF706245-82C2-43D9-BC6F-AFD56B982095}
