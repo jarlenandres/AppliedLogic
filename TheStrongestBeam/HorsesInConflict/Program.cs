@@ -48,7 +48,6 @@ internal class HorsesConflict
 
                     if (newRow == other.row && newCol == other.col)
                     {
-                        // Convertimos columna a letra
                         string letterCol = "";
                         foreach (var kv in columns)
                         {
